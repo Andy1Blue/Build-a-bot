@@ -36,6 +36,9 @@
 <script>
 export default {
   name: "app",
+  created() {
+    console.log(process.env.VUE_APP_SOME_TEST);
+  },
   computed: {
     cart() {
       return this.$store.state.robots.cart;

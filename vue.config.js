@@ -1,4 +1,7 @@
 module.exports = {
+  configureWebpack: {
+
+  },
   devServer: {
     proxy: {
       '/api': {
