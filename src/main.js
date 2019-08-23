@@ -3,8 +3,11 @@ import App from './App.vue';
 
 import router from './router';
 import store from './store';
+import pinDirecitve from './shared/pin-directive'
 
 Vue.config.productionTip = false;
+// Share globally for all components
+Vue.directive('pin', pinDirecitve);
 
 new Vue({
   render: h => h(App),
