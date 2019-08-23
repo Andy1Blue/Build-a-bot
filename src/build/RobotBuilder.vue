@@ -90,7 +90,7 @@ import CollapsibleSection from "../shared/CollapsibleSection.vue";
 export default {
   name: "RobotBuilder",
   created() {
-    this.$store.dispatch("robots/robots/robots/robots/getParts");
+    this.$store.dispatch("robots/getParts");
   },
   beforeRouteLeave(to, from, next) {
     if (this.addedToCart) {
