@@ -44,7 +44,7 @@ export default {
   computed: {
     cart() {
       // Get data from VUEX Store
-      return this.$store.state.cart;
+      return this.$store.state.robots.cart;
     },
     cartSaleItems() {
       return this.$store.getters.cartSaleItems;

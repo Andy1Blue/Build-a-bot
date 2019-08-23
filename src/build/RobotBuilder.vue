@@ -123,7 +123,7 @@ export default {
   mixins: [createdHookMixin],
   computed: {
     availableParts() {
-      return this.$store.state.parts;
+      return this.$store.state.robots.parts;
     },
     saleBorderClass() {
       return this.selectedRobot.head.onSale ? "sale-border" : "";
@@ -146,8 +146,13 @@ export default {
         robot.rightArm.cost +
         robot.base.cost;
 
-      // Add to VUEX Store
-      this.$store.commit("addRobotToCart", Object.assign({}, robot, { cost }));
+      // Add to VUEX Store (mutations)
+      // this.$store.commit("addRobotToCart", Object.assign({}, robot, { cost }));
+
+      // Add by API (actions)
+      this.$store
+        .dispatch("addRobotToCart", Object.assign({}, robot, { cost }))
+        .then(() => this.$router.push("/cart"));
 
       this.cart.push(Object.assign({}, robot, { cost }));
       console.log(this.cart);
