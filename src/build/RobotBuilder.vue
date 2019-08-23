@@ -58,7 +58,7 @@
     <div class="bottom-random">
       <button @click="randomParts()" class="bottom-random-button">Random</button>
     </div>
-    <div>
+    <!-- <div>
       <h1>Cart</h1>
       <table>
         <thead>
@@ -74,7 +74,7 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -281,15 +281,6 @@ export default {
   padding: 3px;
   font-size: 16px;
   border: 0;
-}
-td,
-th {
-  text-align: left;
-  padding: 5px;
-  padding-right: 20px;
-}
-.cost {
-  text-align: right;
 }
 .sale-border {
   border: 3px solid #ff0000;
