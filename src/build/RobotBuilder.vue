@@ -90,7 +90,7 @@ import CollapsibleSection from "../shared/CollapsibleSection.vue";
 export default {
   name: "RobotBuilder",
   created() {
-    this.$store.dispatch("getParts");
+    this.$store.dispatch("robots/robots/robots/robots/getParts");
   },
   beforeRouteLeave(to, from, next) {
     if (this.addedToCart) {
@@ -149,9 +149,9 @@ export default {
       // Add to VUEX Store (mutations)
       // this.$store.commit("addRobotToCart", Object.assign({}, robot, { cost }));
 
-      // Add by API (actions)
+      // Add by API (actions) - namespaced: robots/addRobotToCart
       this.$store
-        .dispatch("addRobotToCart", Object.assign({}, robot, { cost }))
+        .dispatch("robots/addRobotToCart", Object.assign({}, robot, { cost }))
         .then(() => this.$router.push("/cart"));
 
       this.cart.push(Object.assign({}, robot, { cost }));
